@@ -72,8 +72,12 @@ class Editor extends Component {
             ruleInputs,
             h('div', {class: 'spacer'}),
             h('div', {class: 'footer'},
+                'Play with ',
+                h('a', {href: 'https://en.wikipedia.org/wiki/L-system', target: '_blank'}, 'Lindenmayer systems'),
+                ' in your browser.',
+                h('br'),
                 'lsys.js is free software hosted on ',
-                h('a', {href: 'https://github.com/fdb/lsys.js'}, 'GitHub'),
+                h('a', {href: 'https://github.com/fdb/lsys.js', target: '_blank'}, 'GitHub'),
                 '.'
             )
         );

@@ -59,9 +59,10 @@ body {
 }
 
 .editor .footer {
-    padding: 20px;
+    padding: 5px 20px;
     font-size: 80%;
     color: #999;
+    line-height: 160%;
 }
 
 .editor .spacer {
