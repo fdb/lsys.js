@@ -1,0 +1,59 @@
+* {
+    box-sizing: border-box;
+}
+
+html, body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    overflow: hidden;
+}
+
+body {
+    font: 14px sans-serif;
+}
+
+.app {
+    display: flex;
+    flex-direction: row;
+}
+
+.editor {
+    background: #eee;
+    border-right: 2px solid #ccc;
+    min-width: 300px;
+}
+
+.editor label {
+    display: block;
+    font-weight: bold;
+    margin: 10px 0 5px 0;
+}
+
+
+.editor input[type="text"] {
+    padding: 5px;
+    min-width: 100%;
+}
+
+.editor select {
+    padding: 5px;
+    min-width: 100%;
+}
+
+.editor .form-row {
+    padding: 5px 20px;
+}
+
+.editor .presets {
+    background: #fff;
+    border-bottom: 2px solid #ccc;
+    padding: 20px;
+}
+
+.err {
+    padding: 5px;
+    white-space: pre;
+    background: #eee;
+    border-left: 2px solid #ccc;
+}
