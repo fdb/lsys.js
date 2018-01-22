@@ -69,7 +69,13 @@ class Editor extends Component {
                 h('label', {}, 'Premise'),
                 h('input', {type: 'text', value: props.premise, onInput: this.onChangePremise.bind(this)})
             ),
-            ruleInputs
+            ruleInputs,
+            h('div', {class: 'spacer'}),
+            h('div', {class: 'footer'},
+                'lsys.js is free software hosted on ',
+                h('a', {href: 'https://github.com/fdb/lsys.js'}, 'GitHub'),
+                '.'
+            )
         );
     }
 }

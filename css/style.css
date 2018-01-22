@@ -27,6 +27,9 @@ body {
     background: #eee;
     border-right: 2px solid #ccc;
     min-width: 300px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
 }
 
 .editor label {
@@ -34,7 +37,6 @@ body {
     font-weight: bold;
     margin: 10px 0 5px 0;
 }
-
 
 .editor input[type="text"] {
     padding: 5px;
@@ -54,6 +56,20 @@ body {
     background: #fff;
     border-bottom: 2px solid #ccc;
     padding: 20px;
+}
+
+.editor .footer {
+    padding: 20px;
+    font-size: 80%;
+    color: #999;
+}
+
+.editor .spacer {
+    flex: 1;
+}
+
+.editor .footer a {
+    color: #999;
 }
 
 .err {
