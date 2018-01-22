@@ -13,9 +13,14 @@ body {
     font: 14px sans-serif;
 }
 
+#root {
+    height: 100%;
+}
+
 .app {
     display: flex;
     flex-direction: row;
+    height: 100%;
 }
 
 .editor {
