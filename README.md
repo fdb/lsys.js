@@ -2,6 +2,8 @@
 
 This is a simple JavaScript playground for L-systems.
 
+![Screenshot](https://raw.githubusercontent.com/fdb/lsys.js/master/.github/screenshot.png)
+
 It renders to SVG path data. Since it can't use the Canvas context, it has its own affine transform implementation.
 
 It uses [Preact](https://preactjs.com/) and modern JavaScript.
