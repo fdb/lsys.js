@@ -132,6 +132,7 @@ function parseRules(rules) {
     let d = {};
     for (let i = 0; i < rules.length; i++) {
         const rule = rules[i];
+        if (rule.trim().length === 0) continue;
         const key = rule[0];
         if (rule[1] !== '=') {
             throw new Error('Rules should be in the format A=FF[F+F-B][-FBB]');

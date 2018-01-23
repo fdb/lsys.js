@@ -43,6 +43,10 @@ body {
     min-width: 100%;
 }
 
+.editor input.rule {
+    margin-bottom: 5px;
+}
+
 .editor select {
     padding: 5px;
     min-width: 100%;

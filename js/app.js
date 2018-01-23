@@ -8,6 +8,8 @@ const PRESETS = {
     'koch': { premise: 'F-F-F-F', rules: ['F=F-F+F+FF-F-F+F'], generations: 4, stepSize: 2, angle: 90},
 };
 
+const RULE_INPUTS = 5
+
 class Editor extends Component {
 
     onChangeGenerations(e) {
@@ -36,12 +38,9 @@ class Editor extends Component {
 
     render(props) {
         let ruleInputs = [];
-        for (let i = 0; i < props.rules.length; i++) {
+        for (let i = 0; i < RULE_INPUTS; i++) {
             let rule = props.rules[i];
-            let input = h('div', {class: 'form-row'},
-                h('label', {}, 'Premise'),
-                h('input', {type: 'text', value: rule, onInput: this.onChangeRule.bind(this, i)})
-            )
+            let input = h('input', {type: 'text', class: 'rule', value: rule, onInput: this.onChangeRule.bind(this, i)});
             ruleInputs.push(input);
         }
         let presetKeys = Object.keys(props.presets);
@@ -69,7 +68,10 @@ class Editor extends Component {
                 h('label', {}, 'Premise'),
                 h('input', {type: 'text', value: props.premise, onInput: this.onChangePremise.bind(this)})
             ),
-            ruleInputs,
+            h('div', {class: 'form-row'},
+                h('label', {}, 'Rules'),
+                ruleInputs
+            ),
             h('div', {class: 'spacer'}),
             h('div', {class: 'footer'},
                 'Play with ',
