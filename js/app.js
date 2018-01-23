@@ -1,11 +1,16 @@
 const { h, Component, render } = preact;
 
 const PRESETS = {
-    'tree1': { premise: 'A', rules: ['A=FFF[+F+FA][-F-FA]'], generations: 7, stepSize: 10, angle: 7},
-    'tree2': { premise: 'F', rules: ['F=F[+F][-F]'], generations: 7, stepSize: 10, angle: 18},
-    'plant_a': { premise: 'F', rules: ['F=F[+F]F[-F]F'], generations: 4, stepSize: 10, angle: 20},
-    'plant_c': { premise: 'F', rules: ['F=FF-[-F+F+F]+[+F-F-F]'], generations: 4, stepSize: 10, angle: 20},
-    'koch': { premise: 'F-F-F-F', rules: ['F=F-F+F+FF-F-F+F'], generations: 4, stepSize: 2, angle: 90},
+    'tree1': { premise: 'A', rules: ['A=FFF[+F+FA][-F-FA]'], generations: 7, stepSize: 10, angle: 7 },
+    'bush_a': { premise: 'F', rules: ['F=F[+F]F[-F]F'], generations: 5, stepSize: 3.5, angle: 25.7 },
+    'bush_b': { premise: 'F', rules: ['F=F[+F]F[-F][F]'], generations: 6, stepSize: 3.5, angle: 20 },
+    'bush_c': { premise: 'F', rules: ['F=FF-[-F+F+F]+[+F-F-F]'], generations: 5, stepSize: 4, angle: 22.5 },
+    'bush_d': { premise: 'X', rules: ['X=F[+X]F[-X]+X', 'F=FF'], generations: 8, stepSize: 0.8, angle: 20 },
+    'bush_e': { premise: 'X', rules: ['X=F[+X][-X]FX', 'F=FF'], generations: 8, stepSize: 0.8, angle: 25.7 },
+    'bush_f': { premise: 'X', rules: ['X=F-[[X]+X]+F[+FX]-X', 'F=FF'], generations: 5, stepSize: 4, angle: 22.5 },
+    'koch': { premise: 'F-F-F-F', rules: ['F=F-F+F+FF-F-F+F'], generations: 4, stepSize: 2, angle: 90 },
+    'hexagonal_gosper': { premise: 'L', rules: ['L=FL+FR++FR-FL--FLFL-FR+', 'R=-FL+FRFR++FR+FL--FL-FR'], generations: 5, stepSize: 3, angle: 60 },
+    'quadratic_gosper': { premise: 'L', rules: ['L=FLFL-FR-FR+FL+FL-FR-FRFL+FR+FLFLFR-FL+FR+FLFL+FR-FLFR-FR-FL+FL+FRFR-', 'R=+FLFL-FR-FR+FL+FLFR+FL-FRFR-FL-FR+FLFRFR-FL-FRFL+FL+FR-FR-FL+FL+FRFR'], generations: 4, stepSize: 3, angle: 90 }
 };
 
 const RULE_INPUTS = 5
