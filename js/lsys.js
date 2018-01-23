@@ -100,12 +100,9 @@ class Context {
     }
 
     line(length) {
-        // const pt1 = this.transform.map(new Point(0, 0));
-        // this.path.moveTo(pt1.x, pt1.y);
-         const pt2 = this.transform.map(new Point(0, -length));
         this.path.moveTo(this.transform.m[4], this.transform.m[5]);
-        this.path.lineTo(pt2.x, pt2.y);
-        //this.path.lineTo(this.transform.m[4], this.transform.m[5] * -length);
+        const pt = this.transform.map(new Point(0, length));
+        this.path.lineTo(pt.x, pt.y);
     }
 
     translate(tx, ty) {
@@ -153,7 +150,7 @@ function recurse(ctx, ruleBook, rule, generations, stepSize, angle) {
     for (let i = 0; i < rule.length; i++) {
         const c = rule[i];
         switch(c) {
-            case 'F': ctx.line(stepSize); ctx.translate(0, -stepSize); break;
+            case 'F': ctx.line(-stepSize); ctx.translate(0, -stepSize); break;
             case '+': ctx.rotate(deg2rad(angle)); break;
             case '-': ctx.rotate(deg2rad(-angle)); break;
             case '[': ctx.push(); break;
