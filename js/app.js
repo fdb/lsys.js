@@ -103,12 +103,10 @@ class App extends Component {
     constructor(props) {
         super(props);
         this.setPreset('tree1');
-        //this.state = {premise: 'A', rules: ['A=FFF[+F+FA][-F-FA]'], generations: 5.2, stepSize: 10, angle: 20};
     }
 
     setPreset(name) {
         const preset = PRESETS[name];
-        console.log(JSON.stringify(preset));
         this.setState(JSON.parse(JSON.stringify(preset)));
     }
 
